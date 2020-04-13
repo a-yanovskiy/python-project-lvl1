@@ -1,0 +1,8 @@
+setup.py
+a_yanovskiy_brain_games.egg-info/PKG-INFO
+a_yanovskiy_brain_games.egg-info/SOURCES.txt
+a_yanovskiy_brain_games.egg-info/dependency_links.txt
+a_yanovskiy_brain_games.egg-info/entry_points.txt
+a_yanovskiy_brain_games.egg-info/top_level.txt
+brain_games/scripts/__init__.py
+brain_games/scripts/brain_games.py
