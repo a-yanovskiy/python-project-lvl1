@@ -1,5 +1,25 @@
+"""
+Script brain_games.
+
+Simple console games. Project #1
+"""
+
+from brain_games.cli import welcome_user
+
+
 def main():
-	print('Welcome to the Brain Games!')
+    """Return greeting to new user.
+
+    Returns:
+        Greeting
+    """
+    return 'Welcome to the Brain Games!\n'
+
+
+print(main())
+print(welcome_user())
+
 
 if __name__ == '__main__':
-	main()
+    main()
+    welcome_user()
