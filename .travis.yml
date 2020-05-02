@@ -2,8 +2,6 @@ language: python
 
 # на каких версиях производить тесты ?
 python:
-  - "3.6"
-  - "3.7"
   - "3.8"
 
 before_install:
