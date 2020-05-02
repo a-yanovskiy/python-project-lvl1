@@ -1,3 +1,7 @@
 install:
 	@poetry install
-.PHONY: install
+
+check:
+	@poetry check
+
+.PHONY: install check
