@@ -8,7 +8,11 @@ from brain_games.cli import welcome_user
 
 
 def main():
-    """Return greeting to new user."""
+    """Return greeting to new user.
+
+    Returns:
+        Greeting
+    """
     return 'Welcome to the Brain Games!\n'
 
 
