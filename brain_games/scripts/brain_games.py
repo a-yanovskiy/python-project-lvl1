@@ -7,7 +7,7 @@ Simple console games. Project #1
 from brain_games.cli import welcome_user
 
 
-def main():
+def greeting():
     """Return greeting to new user.
 
     Returns:
@@ -15,11 +15,12 @@ def main():
     """
     return 'Welcome to the Brain Games!\n'
 
-
-print(main())
-print(welcome_user())
+def main():
+    print(greeting())
+    print(welcome_user())
 
 
 if __name__ == '__main__':
     main()
+    greeting()
     welcome_user()
