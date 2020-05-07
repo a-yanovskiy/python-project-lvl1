@@ -1,15 +1,20 @@
 """
-Call Parity-check game.
+Calling Parity-check game.
 
 Some discription.
 """
 
 from brain_games.cli import welcome_user
-from brain_games.scripts.brain_games import greeting
 from brain_games.parity_check import parity_check
+from brain_games.scripts.brain_games import greeting
 
 
 def main():
+    """
+    Main function.
+
+    Program start.
+    """
     print(greeting())
     print(welcome_user())
     parity_check()
