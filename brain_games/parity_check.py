@@ -6,11 +6,12 @@
 """
 
 from random import randint
+
 from prompt import string
 
 
-def parity(digit):
-    """Right answer.
+def parity(digit):    # проверяет рандомное число на четность
+    """Parity of random digit.
 
     Returns:
         Right answer.
@@ -21,7 +22,7 @@ def parity(digit):
         return 'no'
 
 
-def input_answer():
+def input_answer():    # значение вводит пользователь
     """
     User answer.
 
@@ -31,7 +32,10 @@ def input_answer():
     user_answer = string('Your answer: ')
     return user_answer
 
-def parity_check():
+def parity_check():    # сравнение результатов
+    """
+    Parity check game.
+    """
     count = 0
     right_ans = ''
     user_ans = ''
