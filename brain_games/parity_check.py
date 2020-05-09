@@ -60,5 +60,6 @@ def parity_check():    # сравнение результатов
             print('Correct!')
             count += 1
         else:
-            count = 3       # остановка цикла
             print("'{0}' is wrong answer ;(. Correct answer was '{1}'.\nLet's try again, {2}!".format(user_ans, right_ans, name))
+            break
+        print('Congratulations, {0}!'.format(name))
