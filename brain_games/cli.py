@@ -14,4 +14,4 @@ def welcome_user():
         New user name.
     """
     name = prompt.string('May I have your name? ')
-    return name
+    return name     # noqa: WPS331

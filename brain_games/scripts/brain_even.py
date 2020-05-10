@@ -8,11 +8,7 @@ from brain_games.parity_check import parity_check
 
 
 def main():
-    """
-    Main function.
-
-    Program start.
-    """
+    """Program start."""
     parity_check()
 
 
