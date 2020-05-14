@@ -62,9 +62,10 @@ def parity_check():  # сравнение результатов
             print('Correct!')  # noqa: WPS421
             count += 1
         else:
-            print("""'{0}' is wrong answer ;(. Correct answer was '{1}'.
+            print(  # noqa: WPS421
+                """'{0}' is wrong answer ;(. Correct answer was '{1}'.
 Let's try again, {2}!
-                  """.format(user_ans, right_ans, name)
+                """.format(user_ans, right_ans, name)
                   )
             break
         if count < 3:
