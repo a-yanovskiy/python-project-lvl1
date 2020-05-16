@@ -1,14 +1,13 @@
 """
-Игра: "Проверка на четность".
+Game engine.
 
-Суть игры в следующем: пользователю показывается случайное число.
-И ему нужно ответить yes, если число четное, или no - если нечетное.
+For simple console games.
 """
 
 from prompt import string
 
 
-def input_answer():  # значение вводит пользователь
+def input_answer():
     """
     User answer.
 
@@ -19,8 +18,14 @@ def input_answer():  # значение вводит пользователь
     return user_answer  # noqa: WPS331
 
 
-def general_logic(question, answer, name):  # сравнение результатов
-    """Game."""
+def general_logic(question, answer, name):
+    """Game engine.
+
+    Parameters:
+        question: question to user
+        answer: right answer
+        name: username
+    """
     count = 0
     while count < 3:
         quest = question()
@@ -34,7 +39,7 @@ def general_logic(question, answer, name):  # сравнение результ�
             print(  # noqa: WPS421
                 """'{0}' is wrong answer ;(. Correct answer was '{1}'.
 Let's try again, {2}!
-                """.format(user_answer, right_ans, name)
+                """.format(user_answer, right_ans, name),
                   )
             break
         if count < 3:
