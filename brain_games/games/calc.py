@@ -16,8 +16,8 @@ def question():
     Returns:
         Question: string.
     """
-    first_digit = randint(0, 100)  # noqa: S311
-    second_digit = randint(0, 100)  # noqa: S311
+    first_digit = randint(1, 100)  # noqa: S311
+    second_digit = randint(1, 100)  # noqa: S311
     sigh = choice('{0}{1}{2}'.format('+', '-', '*'))  # noqa: S311
     return str(first_digit) + sigh + str(second_digit)
 

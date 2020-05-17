@@ -11,12 +11,12 @@ game_rules = 'Answer "yes" if number even otherwise answer "no".\n'
 
 
 def question():
-    """Random digit from 0 to 100.
+    """Random digit from 1 to 100.
 
     Returns:
-        Random digit from 0 to 100.
+        Random digit from 1 to 100.
     """
-    return randint(0, 100)  # noqa: S311
+    return randint(1, 100)  # noqa: S311
 
 
 def answer(question_to_user):  # проверяет рандомное число на четность
