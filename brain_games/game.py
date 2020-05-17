@@ -20,7 +20,13 @@ def input_answer():  # значение вводит пользователь
 
 
 def general_logic(question, answer, name):  # сравнение результатов
-    """Game."""
+    """Game.
+
+    Parameters:
+        question: question to user
+        answer: right answer
+        name: username
+    """
     count = 0
     while count < 3:
         quest = question()
@@ -34,7 +40,7 @@ def general_logic(question, answer, name):  # сравнение результ�
             print(  # noqa: WPS421
                 """'{0}' is wrong answer ;(. Correct answer was '{1}'.
 Let's try again, {2}!
-                """.format(user_answer, right_ans, name)
+                """.format(user_answer, right_ans, name),
                   )
             break
         if count < 3:
