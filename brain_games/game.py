@@ -20,7 +20,7 @@ def input_answer():  # значение вводит пользователь
 
 
 def general_logic(question, answer, name):  # сравнение результатов
-    """Game.
+    """Game engine.
 
     Parameters:
         question: question to user
