@@ -1,5 +1,5 @@
 """
-Calling Parity-check game.
+Calling Calculator-game.
 
 Some discription.
 """
