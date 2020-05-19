@@ -2,7 +2,7 @@
 Игра "НОД".
 
 Суть игры в следующем:
-Пользователю показывается два случайных числа. 
+Пользователю показывается два случайных числа.
 Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
 """
 
@@ -17,8 +17,7 @@ def random_digit():
     Returns:
         random digit (1,100).
     """
-    random_digit = randint(1, 100)  # noqa: S311
-    return (random_digit)
+    return randint(1, 100)  # noqa: S311
 
 
 def question():
@@ -27,23 +26,19 @@ def question():
     Returns:
         Question: string.
     """
-    first_random_digit = random_digit()
-    second_random_digit = random_digit()
-    return ('{0} {1}'.format(first_random_digit, second_random_digit))
+    return ('{0} {1}'.format(random_digit(), random_digit()))
 
 
-def answer(question):
+def answer(from_question):  # noqa: WPS210
     """Right answer.
 
     Parameters:
-        first_digit: first argument from question()
-        second_digit: second argument from question()
+        from_question: arg from question()
 
     Returns:
         Right answer.
     """
-    # сплитим str значения из question():
-    digits_str = question.split()
+    digits_str = from_question.split()  # сплитим str значения из question()
 
     # загоняем их в переменные:
     first_random_digit = int(digits_str[0])
@@ -51,14 +46,13 @@ def answer(question):
 
     # решение
     if first_random_digit == second_random_digit:
-        answer = first_random_digit
+        ans = first_random_digit
     else:
         min_digit = min(first_random_digit, second_random_digit)
         max_digit = max(first_random_digit, second_random_digit)
-        answer = min_digit
-        while max_digit % answer != 0:
-            answer -= 1
-            while min_digit % answer != 0:
-                answer -=1
-                continue
-    return str(answer)
+        ans = min_digit
+        while max_digit % ans != 0:
+            ans -= 1
+            while min_digit % ans != 0:
+                ans -= 1
+    return str(ans)
