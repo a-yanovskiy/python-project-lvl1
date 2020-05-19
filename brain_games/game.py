@@ -32,6 +32,8 @@ def general_logic(question, answer, name):
         print(quest)  # noqa: WPS421
         user_answer = input_answer()
         right_ans = answer(quest)
+        if user_answer == 'exit':
+            break
         if user_answer == right_ans:
             print('Correct!')  # noqa: WPS421
             count += 1
