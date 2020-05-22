@@ -16,20 +16,23 @@ def question():
     Returns:
         Random digit from 1 to 100.
     """
-    return randint(1, 100)  # noqa: S311
+    return randint(1, 100), None  # noqa: S311
 
 
-def answer(question_to_user):  # проверяет рандомное число на четность
+def answer(question_list):  # проверяет рандомное число на четность
     """Parity of random digit.
 
     Parameters:
-        question_to_user: argument from question().
+        question_list: argument from question().
 
     Returns:
         'yes' or 'no': string.
     """
+    # получаем значения из входного списка
+    from_question = question_list[0]
+
     ans = ''
-    if question_to_user % 2 == 0:
+    if from_question % 2 == 0:
         ans = 'yes'
     else:
         ans = 'no'

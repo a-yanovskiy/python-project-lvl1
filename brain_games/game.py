@@ -18,7 +18,7 @@ def input_answer():
     return user_answer  # noqa: WPS331
 
 
-def general_logic(question, answer, name):
+def general_logic(question, answer, name):  # noqa: WPS231
     """Game engine.
 
     Parameters:
@@ -28,10 +28,11 @@ def general_logic(question, answer, name):
     """
     count = 0
     while count < 3:
-        quest = question()
+        question_list = question()
+        quest = question_list[0]
         print(quest)  # noqa: WPS421
         user_answer = input_answer()
-        right_ans = answer(quest)
+        right_ans = answer(question_list)
         if user_answer == 'exit':
             break
         if user_answer == right_ans:
