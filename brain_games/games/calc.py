@@ -19,10 +19,10 @@ def question():
     first_digit = randint(1, 100)  # noqa: S311
     second_digit = randint(1, 100)  # noqa: S311
     sigh = choice('{0}{1}{2}'.format('+', '-', '*'))  # noqa: S311
-    return str(first_digit) + sigh + str(second_digit)
+    return str(first_digit) + sigh + str(second_digit), None
 
 
-def answer(question_to_user):
+def answer(question_list):
     """Right answer.
 
     Parameters:
@@ -31,4 +31,6 @@ def answer(question_to_user):
     Returns:
         Right answer.
     """
-    return str(eval(question_to_user))  # noqa: WPS421, S307
+    # получаем значения из входного списка
+    from_question = question_list[0]
+    return str(eval(from_question))  # noqa: WPS421, S307

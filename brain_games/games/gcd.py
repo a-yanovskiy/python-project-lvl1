@@ -26,10 +26,10 @@ def question():
     Returns:
         Question: string.
     """
-    return ('{0} {1}'.format(random_digit(), random_digit()))
+    return ('{0} {1}'.format(random_digit(), random_digit())), None
 
 
-def answer(from_question):  # noqa: WPS210
+def answer(question_list):  # noqa: WPS210
     """Right answer.
 
     Parameters:
@@ -38,6 +38,9 @@ def answer(from_question):  # noqa: WPS210
     Returns:
         Right answer.
     """
+    # получаем значения из входного списка
+    from_question = question_list[0]
+
     digits_str = from_question.split()  # сплитим str значения из question()
 
     # загоняем их в переменные:
