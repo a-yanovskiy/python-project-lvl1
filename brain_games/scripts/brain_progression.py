@@ -1,25 +1,14 @@
 """
-Calling GCD-game.
-
-Some discription.
+Calling Progression-game.
 """
 
-from brain_games.cli import welcome_user
-from brain_games.game import general_logic
-from brain_games.games.progression import answer, game_rules, question
-
-print('Welcome to the Brain Games!')  # noqa: WPS421
-print(game_rules)  # noqa: WPS421
-
-name = welcome_user()
-
-print('Hello, {0}!\n'.format(name))  # noqa: WPS421
+from brain_games.game_engine import play_game
+from brain_games.games import progression
 
 
 def main():
     """Program start."""
-    global name  # noqa: WPS420
-    general_logic(question, answer, name)
+    play_game(progression)
 
 
 if __name__ == '__main__':

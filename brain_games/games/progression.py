@@ -1,55 +1,59 @@
 """
-Игра "Арифметическая прогрессия".
+The game "Arithmetic progression".
 
-Игроку показывается ряд чисел, образующий арифметическую прогрессию,
-заменив любое из чисел двумя точками. Игрок должен определить это число.
+The player is shown a series of numbers forming an arithmetic progression,
+replacing any of the numbers with two dots. The player must determine this number.
 """
 
 from random import randint
 
-game_rules = 'What number is missing in the progression?\n'
+GAME_DESCRIPTION = 'What number is missing in the progression?'
 
 
-def logic():  # noqa: WPS210
+def generate_game(length, start, step, skip):
+    """Set question and answer from arithmetic progression.
+
+    Parameters:
+        length: lenght of arithmetic progression
+        start: start of arithmetic progression
+        step: step of arithmetic progression
+        skip: index of skiping number
+
+    Returns:
+        progression: progression with skiped digit
+        answer: skiped digit with index = skip_digit
+    """
+    progression = ''
+    for index in range(length):
+        element = str(start + step * index)
+        if index == skip:
+            answer = element
+            progression += '.. '
+            continue
+        progression += element + ' '
+        question = progression[:-1]
+    return question, answer
+
+
+def generate_game_data():
     """Logic for Progression-game.
 
     Returns:
-        question_list: returns progression list with missed digit
-        skiped_digit: missed digit
+        question: returns progression list with missed digit
+        answer: missed digit
     """
-    digit = randint(1, 10)  # noqa: S311
-    step = randint(1, 10)  # noqa: S311
-    skip = randint(0, 9)  # noqa: S311
-    question_list = ''
-    for index in range(10):
-        if index == skip:
-            question_list = ('{0} .. ').format(question_list)
-            skiped_digit = digit
-            digit += step
-        question_list = ('{0} {1} ').format(question_list, str(digit))
-        digit += step
-    return question_list, skiped_digit
+    PROGRESSION_LENGHT = 10
+    DIGIT_RANDOM_TO = 10
+    STEP_RANDOM_TO = 10
 
+    # Randoms block
+    digit = randint(1, DIGIT_RANDOM_TO)
+    step = randint(1, STEP_RANDOM_TO)
+    skip = randint(0, PROGRESSION_LENGHT - 1)
+    # end
 
-def question():
-    """Question.
+    (question, answer) = generate_game(
+        PROGRESSION_LENGHT, digit, step, skip,
+    )
 
-    Returns:
-        Question: string.
-    """
-    question_list, skiped_digit = logic()
-    return question_list, skiped_digit  # noqa: WPS331
-
-
-def answer(question_list):
-    """Right answer.
-
-    Parameters:
-        question_list: argument question() returns
-
-    Returns:
-        Right answer.
-    """
-    # получаем значения из входного списка
-    skiped_digit = question_list[1]
-    return str(skiped_digit)
+    return question, answer

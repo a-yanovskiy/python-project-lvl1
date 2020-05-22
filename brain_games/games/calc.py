@@ -1,36 +1,30 @@
 """
-Игра: "Калькулятор".
-
-Пользователю показывается случайное математическое выражение,
-которое нужно вычислить и записать правильный ответ.
+Game: "Calculator".
+The user is shown a random mathematical expression
+that needs to be calculated and written down the correct answer.
 """
 
+import operator
 from random import choice, randint
 
-game_rules = 'What is the result of the expression?.\n'
+GAME_DESCRIPTION = 'What is the result of the expression?.'
 
 
-def question():
+def generate_game_data():
     """Question.
 
     Returns:
         Question: string.
     """
-    first_digit = randint(1, 100)  # noqa: S311
-    second_digit = randint(1, 100)  # noqa: S311
-    sigh = choice('{0}{1}{2}'.format('+', '-', '*'))  # noqa: S311
-    return str(first_digit) + sigh + str(second_digit), None
-
-
-def answer(question_list):
-    """Right answer.
-
-    Parameters:
-        question_list: argument from question()
-
-    Returns:
-        Right answer.
-    """
-    # получаем значения из входного списка
-    from_question = question_list[0]
-    return str(eval(from_question))  # noqa: WPS421, S307
+    first_digit = randint(1, 100)
+    second_digit = randint(1, 100)
+    sighs = ['+', '-', '*']
+    choice_sigh = choice(sighs)
+    if choice_sigh == '+':
+        answer = operator.add(first_digit, second_digit)
+    elif choice_sigh == '-':
+        answer = operator.sub(first_digit, second_digit)
+    elif choice_sigh == '*':
+        answer = operator.mul(first_digit, second_digit)
+    question = '{0} {1} {2}'.format(first_digit, choice_sigh, second_digit)
+    return question, str(answer)

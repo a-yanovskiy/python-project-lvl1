@@ -1,39 +1,32 @@
 """
-Игра: "Проверка на четность".
-
-Суть игры в следующем: пользователю показывается случайное число.
-И ему нужно ответить yes, если число четное, или no - если нечетное.
+Game: "Parity check".
+A random number is shown to the user.
+And he needs to answer yes if the number is even, or no if it is odd.
 """
 
 from random import randint
 
-game_rules = 'Answer "yes" if number even otherwise answer "no".\n'
+GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
-def question():
-    """Random digit from 1 to 100.
-
-    Returns:
-        Random digit from 1 to 100.
-    """
-    return randint(1, 100), None  # noqa: S311
-
-
-def answer(question_list):  # проверяет рандомное число на четность
-    """Parity of random digit.
+def is_even(digit):
+    """Take digit, if even returns True.
 
     Parameters:
-        question_list: argument from question().
+        digit: Integer.
 
     Returns:
-        'yes' or 'no': string.
+        True or False
     """
-    # получаем значения из входного списка
-    from_question = question_list[0]
+    return digit % 2 == 0
 
-    ans = ''
-    if from_question % 2 == 0:
-        ans = 'yes'
-    else:
-        ans = 'no'
-    return ans
+
+def generate_game_data():
+    """Logic for Brain-even game.
+
+    Returns:
+        question, answer.
+    """
+    question = randint(1, 100)
+    answer = 'yes' if is_even(question) else 'no'
+    return question, answer

@@ -1,61 +1,47 @@
 """
-Игра "НОД".
+The game "GCD".
 
-Суть игры в следующем:
-Пользователю показывается два случайных числа.
-Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+The user is shown two random numbers.
+The user must calculate and enter the greatest common divisor of these numbers.
 """
 
 from random import randint
 
-game_rules = 'Find the greatest common divisor of given numbers.\n'
+GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def random_digit():
-    """Random digit.
-
-    Returns:
-        random digit (1,100).
-    """
-    return randint(1, 100)  # noqa: S311
-
-
-def question():
-    """Question.
-
-    Returns:
-        Question: string.
-    """
-    return ('{0} {1}'.format(random_digit(), random_digit())), None
-
-
-def answer(question_list):  # noqa: WPS210
-    """Right answer.
+def get_gcd(first_digit, second_digit):
+    """Take two digits, returns greatest common divisor.
 
     Parameters:
-        question_list: arg from question()
+        first_digit: integer
+        second_digit: integer.
 
     Returns:
-        Right answer.
+        Greatest common divisor
     """
-    # получаем значения из входного списка
-    from_question = question_list[0]
-
-    digits_str = from_question.split()  # сплитим str значения из question()
-
-    # загоняем их в переменные:
-    first_random_digit = int(digits_str[0])
-    second_random_digit = int(digits_str[1])
-
-    # решение
-    if first_random_digit == second_random_digit:
-        ans = first_random_digit
+    if first_digit == second_digit:
+        answer = first_digit
     else:
-        min_digit = min(first_random_digit, second_random_digit)
-        max_digit = max(first_random_digit, second_random_digit)
-        ans = min_digit
-        while max_digit % ans != 0:
-            ans -= 1
-            while min_digit % ans != 0:
-                ans -= 1
-    return str(ans)
+        min_digit = min(first_digit, second_digit)
+        max_digit = max(first_digit, second_digit)
+        answer = min_digit
+        while max_digit % answer != 0:
+            answer -= 1
+            while min_digit % answer != 0:
+                answer -= 1
+    return answer
+
+
+def generate_game_data():
+    """Right answer.
+
+    Returns:
+        question, answer.
+    """
+    first_random_digit = randint(1, 100)
+    second_random_digit = randint(1, 100)
+
+    question = '{0}, {1}'.format(first_random_digit, second_random_digit)
+    answer = get_gcd(first_random_digit, second_random_digit)
+    return question, str(answer)
