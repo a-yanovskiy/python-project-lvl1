@@ -1,12 +1,12 @@
 """
-Calling Calulator-check game.
+Calling Prime-check game.
 
 Some discription.
 """
 
 from brain_games.cli import welcome_user
 from brain_games.game import general_logic
-from brain_games.games.even import answer, game_rules, question
+from brain_games.games.prime import answer, game_rules, question
 
 print('Welcome to the Brain Games!')  # noqa: WPS421
 print(game_rules)  # noqa: WPS421
