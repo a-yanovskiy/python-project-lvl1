@@ -33,7 +33,7 @@ def answer(question_list):  # noqa: WPS210
     """Right answer.
 
     Parameters:
-        from_question: arg from question()
+        question_list: arg from question()
 
     Returns:
         Right answer.

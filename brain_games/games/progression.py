@@ -10,17 +10,23 @@ from random import randint
 game_rules = 'What number is missing in the progression?\n'
 
 
-def logic():
-    digit = randint(1, 10)
-    step = randint(1, 10)  # увеличить для усложнения
-    skip = randint(0, 9)
+def logic():  # noqa: WPS210
+    """Logic for Progression-game.
+
+    Returns:
+        question_list: returns progression list with missed digit
+        skiped_digit: missed digit
+    """
+    digit = randint(1, 10)  # noqa: S311
+    step = randint(1, 10)  # noqa: S311
+    skip = randint(0, 9)  # noqa: S311
     question_list = ''
-    for i in range(10):
-        if i == skip:
-            question_list = question_list + '.. '
+    for index in range(10):
+        if index == skip:
+            question_list = ('{0} .. ').format(question_list)
             skiped_digit = digit
             digit += step
-        question_list = question_list + str(digit) + ' '
+        question_list = ('{0} {1} ').format(question_list, str(digit))
         digit += step
     return question_list, skiped_digit
 
@@ -32,14 +38,14 @@ def question():
         Question: string.
     """
     question_list, skiped_digit = logic()
-    return question_list, skiped_digit
+    return question_list, skiped_digit  # noqa: WPS331
 
 
 def answer(question_list):
     """Right answer.
 
     Parameters:
-        quest: argument question() returns
+        question_list: argument question() returns
 
     Returns:
         Right answer.

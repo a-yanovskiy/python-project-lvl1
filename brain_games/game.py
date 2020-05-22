@@ -18,7 +18,7 @@ def input_answer():
     return user_answer  # noqa: WPS331
 
 
-def general_logic(question, answer, name):
+def general_logic(question, answer, name):  # noqa: WPS231
     """Game engine.
 
     Parameters:

@@ -26,7 +26,7 @@ def answer(question_list):
     """Right answer.
 
     Parameters:
-        question_to_user: argument from question()
+        question_list: argument from question()
 
     Returns:
         Right answer.

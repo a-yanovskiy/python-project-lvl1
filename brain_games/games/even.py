@@ -23,7 +23,7 @@ def answer(question_list):  # проверяет рандомное число �
     """Parity of random digit.
 
     Parameters:
-        question_to_user: argument from question().
+        question_list: argument from question().
 
     Returns:
         'yes' or 'no': string.
