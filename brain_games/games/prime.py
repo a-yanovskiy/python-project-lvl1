@@ -33,7 +33,7 @@ def answer(question_list):  # проверяет рандомное число �
     from_question = question_list[0]
 
     ans = 'yes'
-    divider = from_question -1
+    divider = from_question - 1
     while divider > 1:
         if from_question % divider == 0:
             ans = 'no'
