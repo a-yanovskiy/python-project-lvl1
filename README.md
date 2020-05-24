@@ -6,4 +6,4 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
 ## Brain-games
-[![asciicast](https://asciinema.org/a/OiVTyPngFZrihrrb1kzEQDW6R.svg)](https://asciinema.org/a/OiVTyPngFZrihrrb1kzEQDW6R)
+[![asciicast](https://asciinema.org/a/rlxZ1MjevLY0gSsuOQEiotwBs.svg)](https://asciinema.org/a/rlxZ1MjevLY0gSsuOQEiotwBs)
