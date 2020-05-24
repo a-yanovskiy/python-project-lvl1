@@ -47,15 +47,18 @@ def answer(question_list):  # noqa: WPS210
     first_random_digit = int(digits_str[0])
     second_random_digit = int(digits_str[1])
 
-    # решение
+    # проверяем, равны числа или нет
     if first_random_digit == second_random_digit:
         ans = first_random_digit
     else:
+        # выясняем, какое из чисел больше, а какое меньше
         min_digit = min(first_random_digit, second_random_digit)
         max_digit = max(first_random_digit, second_random_digit)
-        ans = min_digit
-        while max_digit % ans != 0:
+        ans = min_digit  # минимальное число принимаем за ответ
+        while max_digit % ans != 0:  # делим большее число на меньшее
+            # если не делится, отнимаем 1 от ans
             ans -= 1
+            # проверяем делится ли меньшее число на делитель большего
             while min_digit % ans != 0:
                 ans -= 1
     return str(ans)

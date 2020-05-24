@@ -23,7 +23,7 @@ def question():
 
 
 def answer(question_list):
-    """Right answer.
+    """Calculate question().
 
     Parameters:
         question_list: argument from question()

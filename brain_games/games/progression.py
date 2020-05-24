@@ -29,6 +29,8 @@ def logic():  # noqa: WPS210
         question_list = ('{0} {1} ').format(question_list, str(digit))
         digit += step
     return question_list, skiped_digit
+# нужно было получить из logic() пропущенное число skiped_digit из прогрессии,
+# из-за этого пришлось возвращать все question() списками
 
 
 def question():

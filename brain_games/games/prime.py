@@ -20,8 +20,8 @@ def question():
     return randint(1, 100), None  # noqa: S311
 
 
-def answer(question_list):  # проверяет рандомное число на четность
-    """Parity of random digit.
+def answer(question_list):
+    """Prime of random digit.
 
     Parameters:
         question_list: argument from question().
@@ -29,7 +29,6 @@ def answer(question_list):  # проверяет рандомное число �
     Returns:
         'yes' or 'no': string.
     """
-    # получаем значения из входного списка
     from_question = question_list[0]
 
     ans = 'yes'
