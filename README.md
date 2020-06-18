@@ -1,6 +1,6 @@
 # python-project-lvl1
 
-Добрый день. Проект был отправлен слишком рано. В него еще вносятся испрвления согласно последнему шагу "Проверка". Прошу прощения за такой косяк, как я могу сообщить Вам о готовности проекта? 
+Добрый день. Проект был отправлен слишком рано. В него еще вносятся испрвления согласно последнему шагу "Проверка". Прошу прощения за такой косяк. 
 
 [![Build Status](https://travis-ci.com/a-yanovskiy/python-project-lvl1.svg?branch=master)](https://travis-ci.com/a-yanovskiy/python-project-lvl1)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
