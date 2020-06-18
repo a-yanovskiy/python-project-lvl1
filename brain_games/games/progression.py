@@ -7,10 +7,10 @@
 
 from random import randint
 
-game_rules = 'What number is missing in the progression?\n'
+GAME_RULES = 'What number is missing in the progression?\n'
 
 
-def logic():  # noqa: WPS210
+def build_logic():  # noqa: WPS210
     """Logic for Progression-game.
 
     Returns:
@@ -33,17 +33,17 @@ def logic():  # noqa: WPS210
 # из-за этого пришлось возвращать все question() списками
 
 
-def question():
+def set_question():
     """Question.
 
     Returns:
         Question: string.
     """
-    question_list, skiped_digit = logic()
+    question_list, skiped_digit = build_logic()
     return question_list, skiped_digit  # noqa: WPS331
 
 
-def answer(question_list):
+def get_answer(question_list):
     """Right answer.
 
     Parameters:
@@ -52,6 +52,4 @@ def answer(question_list):
     Returns:
         Right answer.
     """
-    # получаем значения из входного списка
-    skiped_digit = question_list[1]
-    return str(skiped_digit)
+    return str(question_list[1])

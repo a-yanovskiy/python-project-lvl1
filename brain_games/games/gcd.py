@@ -8,7 +8,7 @@
 
 from random import randint
 
-game_rules = 'Find the greatest common divisor of given numbers.\n'
+GAME_RULES = 'Find the greatest common divisor of given numbers.\n'
 
 
 def random_digit():
@@ -20,16 +20,16 @@ def random_digit():
     return randint(1, 100)  # noqa: S311
 
 
-def question():
+def set_question():
     """Question.
 
     Returns:
         Question: string.
     """
-    return ('{0} {1}'.format(random_digit(), random_digit())), None
+    return ('{0} {1}'.format(random_digit(), random_digit())), None  # question_list
 
 
-def answer(question_list):  # noqa: WPS210
+def get_answer(question_list):  # noqa: WPS210
     """Right answer.
 
     Parameters:

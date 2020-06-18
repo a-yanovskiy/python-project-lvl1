@@ -7,10 +7,10 @@
 
 from random import choice, randint
 
-game_rules = 'What is the result of the expression?.\n'
+GAME_RULES = 'What is the result of the expression?.\n'
 
 
-def question():
+def set_question():
     """Question.
 
     Returns:
@@ -19,18 +19,16 @@ def question():
     first_digit = randint(1, 100)  # noqa: S311
     second_digit = randint(1, 100)  # noqa: S311
     sigh = choice('{0}{1}{2}'.format('+', '-', '*'))  # noqa: S311
-    return str(first_digit) + sigh + str(second_digit), None
+    return str(first_digit) + sigh + str(second_digit), None  # question_list
 
 
-def answer(question_list):
-    """Calculate question().
+def get_answer(question_list):
+    """Calculate set_question().
 
     Parameters:
-        question_list: argument from question()
+        question_list: argument from set_question()
 
     Returns:
         Right answer.
     """
-    # получаем значения из входного списка
-    from_question = question_list[0]
-    return str(eval(from_question))  # noqa: WPS421, S307
+    return str(eval(question_list[0]))  # noqa: WPS421, S307

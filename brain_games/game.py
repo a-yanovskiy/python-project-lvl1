@@ -18,7 +18,7 @@ def input_answer():
     return user_answer  # noqa: WPS331
 
 
-def general_logic(question, answer, name):  # noqa: WPS231
+def general_logic(setQuestion, answer, name):  # noqa: WPS231
     """Game engine.
 
     Parameters:
@@ -28,7 +28,7 @@ def general_logic(question, answer, name):  # noqa: WPS231
     """
     count = 0
     while count < 3:
-        question_list = question()
+        question_list = setQuestion()
         quest = question_list[0]
         print(quest)  # noqa: WPS421
         user_answer = input_answer()

@@ -8,10 +8,10 @@
 
 from random import randint
 
-game_rules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
 
 
-def question():
+def set_question():
     """Random digit from 1 to 100.
 
     Returns:
@@ -20,11 +20,11 @@ def question():
     return randint(1, 100), None  # noqa: S311
 
 
-def answer(question_list):
+def get_answer(question_list):
     """Prime of random digit.
 
     Parameters:
-        question_list: argument from question().
+        question_list: argument from set_question().
 
     Returns:
         'yes' or 'no': string.
