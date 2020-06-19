@@ -1,8 +1,17 @@
 [tool.poetry]
 name = "a-yanovskiy_brain_games"
 version = "1.0.0"
-description = ""
+description = "Brain games"
 authors = ["artem yanovskiy <a.e.yanovskiy@gmail.com>"]
+repository = "https://github.com/a-yanovskiy/python-project-lvl1.git"
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Other Audience",
+	"License :: Freeware",
+	"Natural Language :: English",
+	"Programming Language :: Python :: 3.8",
+	"Topic :: Games/Entertainment"
+]
 packages = [
 	{ include = "brain_games" },
 ]
