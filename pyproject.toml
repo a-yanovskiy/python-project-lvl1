@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "a-yanovskiy_brain_games"
-version = "1.0.0"
+version = "1.0.1"
 description = "Brain games"
 authors = ["artem yanovskiy <a.e.yanovskiy@gmail.com>"]
 repository = "https://github.com/a-yanovskiy/python-project-lvl1.git"
