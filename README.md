@@ -4,8 +4,8 @@
 
 [![Build Status](https://travis-ci.com/a-yanovskiy/python-project-lvl1.svg?branch=master)](https://travis-ci.com/a-yanovskiy/python-project-lvl1)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/06ecd24ffad07549a7f1/maintainability)](https://codeclimate.com/github/a-yanovskiy/python-project-lvl1/maintainability)
+
 
 ## Installing Brain-games
 [![asciicast](https://asciinema.org/a/22c9NpWnYgDck0xdfs7OuFumu.svg)](https://asciinema.org/a/22c9NpWnYgDck0xdfs7OuFumu)
