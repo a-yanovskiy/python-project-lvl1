@@ -10,27 +10,16 @@ from random import randint
 GAME_RULES = 'Answer "yes" if number even otherwise answer "no".\n'
 
 
-def set_question():
+def game_logic():
     """Random digit from 1 to 100.
 
     Returns:
         Random digit from 1 to 100.
     """
-    return randint(1, 100), None  # noqa: S311
-
-
-def get_answer(question_list):  # проверяет рандомное число на четность
-    """Parity of random digit.
-
-    Parameters:
-        question_list: argument from question().
-
-    Returns:
-        'yes' or 'no': string.
-    """
-    ans = ''
-    if question_list[0] % 2 == 0:
-        ans = 'yes'
+    question = randint(1, 100) # noqa: S311
+    answer = ''
+    if question % 2 == 0:
+        answer = 'yes'
     else:
-        ans = 'no'
-    return ans
+        answer = 'no'
+    return question, answer

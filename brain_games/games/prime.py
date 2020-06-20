@@ -11,16 +11,7 @@ from random import randint
 GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
 
 
-def set_question():
-    """Random digit from 1 to 100.
-
-    Returns:
-        Random digit from 1 to 100.
-    """
-    return randint(1, 100), None  # noqa: S311
-
-
-def get_answer(question_list):
+def game_logic():
     """Prime of random digit.
 
     Parameters:
@@ -29,14 +20,13 @@ def get_answer(question_list):
     Returns:
         'yes' or 'no': string.
     """
-    from_question = question_list[0]
-
-    ans = 'yes'
-    divider = from_question - 1
+    question = randint(1, 100)  # noqa: S311
+    answer = 'yes'
+    divider = question - 1
     while divider > 1:
-        if from_question % divider == 0:
-            ans = 'no'
+        if question % divider == 0:
+            answer = 'no'
             break
         else:
             divider -= 1
-    return ans
+    return question, answer
