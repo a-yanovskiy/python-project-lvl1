@@ -8,17 +8,14 @@
 
 from random import randint
 
-GAME_RULES = 'Find the greatest common divisor of given numbers.\n'
+game_rules = 'Find the greatest common divisor of given numbers.\n'
 
 
 def game_logic():  # noqa: WPS210
     """Right answer.
 
-    Parameters:
-        question_list: arg from question()
-
     Returns:
-        Right answer.
+        question, answer.
     """
     first_random_digit = randint(1, 100)  # noqa: S311
     second_random_digit = randint(1, 100)  # noqa: S311

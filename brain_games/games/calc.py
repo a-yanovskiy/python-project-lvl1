@@ -7,11 +7,10 @@
 
 from random import choice, randint
 
+game_rules = 'What is the result of the expression?.\n'
 
-GAME_RULES = 'What is the result of the expression?.\n'
 
-
-def game_logic():
+def game_logic():  # noqa: WPS210
     """Question.
 
     Returns:

@@ -4,13 +4,13 @@ Calling Calculator-game.
 Some discription.
 """
 
-from brain_games.games.calc import GAME_RULES, game_logic
 from brain_games.game import general_logic
+from brain_games.games.calc import game_logic, game_rules
 
 
 def main():
     """Program start."""
-    general_logic(GAME_RULES, game_logic)
+    general_logic(game_rules, game_logic)
 
 
 if __name__ == '__main__':

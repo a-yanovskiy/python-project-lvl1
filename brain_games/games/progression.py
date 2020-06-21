@@ -7,7 +7,7 @@
 
 from random import randint
 
-GAME_RULES = 'What number is missing in the progression?\n'
+game_rules = 'What number is missing in the progression?\n'
 
 
 def game_logic():  # noqa: WPS210

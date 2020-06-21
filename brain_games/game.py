@@ -3,29 +3,25 @@ Game engine.
 
 For simple console games.
 """
-
 from prompt import string
+
 from brain_games.cli import welcome_user
 
 
-def general_logic(GAME_RULES, game_logic):  # noqa: WPS231
+def general_logic(game_rules, game_logic):  # noqa: WPS210
     """Game engine.
 
     Parameters:
-        question: question to user
-        answer: right answer
-        name: username
+        game_rules: Game rules
+        game_logic: contains question and answer
     """
-
     print('Welcome to the Brain Games!')  # noqa: WPS421
-    print(GAME_RULES)  # noqa: WPS421
+    print(game_rules)  # noqa: WPS421
     username = welcome_user()
     print('Hello, {0}!\n'.format(username))  # noqa: WPS421
-
-
     count = 0
-    while count < 3:
     # extract question, answer from game_logic
+    while count < 3:
         game_logic_list = game_logic()
         question = game_logic_list[0]
         answer = game_logic_list[1]

@@ -7,16 +7,16 @@
 
 from random import randint
 
-GAME_RULES = 'Answer "yes" if number even otherwise answer "no".\n'
+game_rules = 'Answer "yes" if number even otherwise answer "no".\n'
 
 
 def game_logic():
-    """Random digit from 1 to 100.
+    """Logic for Brain-even game.
 
     Returns:
-        Random digit from 1 to 100.
+        question, answer.
     """
-    question = randint(1, 100) # noqa: S311
+    question = randint(1, 100)  # noqa: S311
     answer = ''
     if question % 2 == 0:
         answer = 'yes'
