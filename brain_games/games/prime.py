@@ -8,22 +8,30 @@
 
 from random import randint
 
-game_rules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n'
+description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def game_logic():
+def set_game_logic():
     """Prime of random digit.
 
     Returns:
         question, answer.
     """
+
+
     question = randint(1, 100)  # noqa: S311
-    answer = 'yes'
-    divider = question - 1
-    while divider > 1:
-        if question % divider == 0:
-            answer = 'no'
-            break
-        else:
-            divider -= 1
-    return question, answer
+
+
+    def check_simpity(question):
+        answer = 'yes'
+        divider = question - 1
+        while divider > 1:
+            if question % divider == 0:
+                answer = 'no'
+                break
+            else:
+                divider -= 1
+        return answer
+
+
+    return question, check_simpity(question)

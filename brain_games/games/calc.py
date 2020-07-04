@@ -6,11 +6,12 @@
 """
 
 from random import choice, randint
+import operator
 
-game_rules = 'What is the result of the expression?.\n'
+description = 'What is the result of the expression?.'
 
 
-def game_logic():  # noqa: WPS210
+def set_game_logic():  # noqa: WPS210
     """Question.
 
     Returns:
@@ -18,15 +19,13 @@ def game_logic():  # noqa: WPS210
     """
     first_digit = randint(1, 100)  # noqa: S311
     second_digit = randint(1, 100)  # noqa: S311
-    sigh = ['+', '-', '*']
-    choice_sigh = choice(sigh)  # noqa: S311
+    sighs = ['+', '-', '*']
+    choice_sigh = choice(sighs)  # noqa: S311
     if choice_sigh == '+':
-        question = '{0} + {1}'.format(first_digit, second_digit)
-        answer = first_digit + second_digit
+        answer = operator.add(first_digit, second_digit)
     elif choice_sigh == '-':
-        question = '{0} - {1}'.format(first_digit, second_digit)
-        answer = first_digit - second_digit
+        answer = operator.sub(first_digit, second_digit)
     elif choice_sigh == '*':
-        question = '{0} * {1}'.format(first_digit, second_digit)
-        answer = first_digit * second_digit
+        answer = operator.mul(first_digit, second_digit)
+    question = '{0} {1} {2}'.format(first_digit, choice_sigh, second_digit)
     return question, str(answer)

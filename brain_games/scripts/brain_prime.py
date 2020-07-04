@@ -4,13 +4,13 @@ Calling Prime-check game.
 Some discription.
 """
 
-from brain_games.game import general_logic
-from brain_games.games.prime import game_logic, game_rules
+from brain_games.game import set_general_logic
+from brain_games.games.prime import set_game_logic, description
 
 
 def main():
     """Program start."""
-    general_logic(game_rules, game_logic)
+    set_general_logic(description, set_game_logic)
 
 
 if __name__ == '__main__':
