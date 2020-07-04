@@ -17,21 +17,17 @@ def set_game_logic():
     Returns:
         question, answer.
     """
-
-
     question = randint(1, 100)  # noqa: S311
 
-
-    def check_simpity(question):
+    def check_simpity(digit):
         answer = 'yes'
-        divider = question - 1
+        divider = digit - 1
         while divider > 1:
-            if question % divider == 0:
+            if digit % divider == 0:
                 answer = 'no'
                 break
             else:
                 divider -= 1
         return answer
-
 
     return question, check_simpity(question)

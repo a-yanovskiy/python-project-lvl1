@@ -17,41 +17,25 @@ def set_game_logic():  # noqa: WPS210
         question: returns progression list with missed digit
         answer: missed digit
     """
+    progression_lenght = 10
 
-    PROGRESSION_LENGTH = 10
+    digit = randint(1, progression_lenght)  # noqa: S311
+    step = randint(1, progression_lenght)  # noqa: S311
+    skip = randint(0, progression_lenght - 1)  # noqa: S311
 
-    digit = randint(1, PROGRESSION_LENGTH)  # noqa: S311
-    step = randint(1, PROGRESSION_LENGTH)  # noqa: S311
-    skip = randint(0, PROGRESSION_LENGTH - 1)  # noqa: S311
-
-    # question = ''
-
-    # for index in range(PROGRESSION_LENGTH):
-    #     if index == skip:
-    #         question = ('{0} .. ').format(question)
-    #         answer = digit
-    #         digit += step
-    #     question = ('{0} {1} ').format(question, str(digit))
-    #     digit += step
-
-
-    def gen_progression(length, start, step, skip):
+    def gen_progression(length, start, step_dig, skip_dig):
         question = ''
         answer = 0
         element = ''
         for index in range(length):
-            element = str(start + step * index) + ' '
-            if index == skip:
-                answer = start + step * index
+            element = str(start + step_dig * index) + ' '  # noqa: WPS336
+            if index == skip_dig:
+                answer = start + step_dig * index
                 element = '.. '
             question += element
         return question, answer
 
-
-    progression_list = gen_progression(PROGRESSION_LENGTH, digit, step, skip)
-
+    progression_list = gen_progression(progression_lenght, digit, step, skip)
     question = progression_list[0]
     answer = progression_list[1]
-
-
     return question, str(answer)

@@ -22,22 +22,17 @@ def set_game_logic():  # noqa: WPS210
 
     question = '{0}, {1}'.format(first_random_digit, second_random_digit)
 
-
     def get_gcd(first_digit, second_digit):
         if first_digit == second_digit:
             answer = first_digit
         else:
-        # выясняем, какое из чисел больше, а какое меньше
             min_digit = min(first_digit, second_digit)
             max_digit = max(first_digit, second_digit)
             answer = min_digit  # минимальное число принимаем за ответ
             while max_digit % answer != 0:  # делим большее число на меньшее
-            # если не делится, отнимаем 1 от answer
                 answer -= 1
-                # проверяем делится ли меньшее число на делитель большего
                 while min_digit % answer != 0:
                     answer -= 1
         return answer
-
 
     return question, str(get_gcd(first_random_digit, second_random_digit))

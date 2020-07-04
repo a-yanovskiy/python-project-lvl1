@@ -21,7 +21,7 @@ def set_general_logic(description, set_game_logic):  # noqa: WPS210
     print('Hello, {0}!\n'.format(username))  # noqa: WPS421
     count = 0
     # extract question, answer from set_game_logic
-    NUMBER_OF_QUESTIONS = 3
+    NUMBER_OF_QUESTIONS = 3  # noqa: N806
     while count < NUMBER_OF_QUESTIONS:
         game_logic_list = set_game_logic()
         question = game_logic_list[0]

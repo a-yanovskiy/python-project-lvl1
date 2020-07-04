@@ -5,8 +5,8 @@
 которое нужно вычислить и записать правильный ответ.
 """
 
-from random import choice, randint
 import operator
+from random import choice, randint
 
 description = 'What is the result of the expression?.'
 
