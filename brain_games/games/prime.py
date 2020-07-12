@@ -11,23 +11,32 @@ from random import randint
 description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
+def is_prime(digit):  # должен быть предикат
+    """Take digit. Returns True if it is prime, or False is not.
+
+    Parameters:
+        digit: integer.
+
+    Returns:
+        answer: True if it is prime, or False is not.
+    """
+    answer = True
+    divider = digit - 1
+    while divider > 1:
+        if digit % divider == 0:
+            answer = False
+            break
+        else:
+            divider -= 1
+    return answer
+
+
 def set_game_logic():
     """Prime of random digit.
 
     Returns:
         question, answer.
     """
-    question = randint(1, 100)  # noqa: S311
-
-    def check_simpity(digit):
-        answer = 'yes'
-        divider = digit - 1
-        while divider > 1:
-            if digit % divider == 0:
-                answer = 'no'
-                break
-            else:
-                divider -= 1
-        return answer
-
-    return question, check_simpity(question)
+    question = randint(1, 100)
+    answer = is_prime(question)
+    return question, answer

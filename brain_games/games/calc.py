@@ -11,16 +11,16 @@ from random import choice, randint
 description = 'What is the result of the expression?.'
 
 
-def set_game_logic():  # noqa: WPS210
+def set_game_logic():
     """Question.
 
     Returns:
         Question: string.
     """
-    first_digit = randint(1, 100)  # noqa: S311
-    second_digit = randint(1, 100)  # noqa: S311
+    first_digit = randint(1, 100)
+    second_digit = randint(1, 100)
     sighs = ['+', '-', '*']
-    choice_sigh = choice(sighs)  # noqa: S311
+    choice_sigh = choice(sighs)
     if choice_sigh == '+':
         answer = operator.add(first_digit, second_digit)
     elif choice_sigh == '-':

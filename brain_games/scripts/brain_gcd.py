@@ -5,7 +5,7 @@ Some discription.
 """
 
 from brain_games.game import set_general_logic
-from brain_games.games.prime import description, set_game_logic
+from brain_games.games.gcd import description, set_game_logic
 
 
 def main():
