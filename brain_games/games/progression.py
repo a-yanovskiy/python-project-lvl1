@@ -52,7 +52,7 @@ def find_question_and_answer(progression, skip_dig):
     return question, str(answer)
 
 
-def set_game_logic():
+def generate_game_data():
     """Logic for Progression-game.
 
     Returns:

@@ -22,7 +22,7 @@ def is_even(digit):
     return True if digit % 2 == 0 else False
 
 
-def set_game_logic():
+def generate_game_data():
     """Logic for Brain-even game.
 
     Returns:

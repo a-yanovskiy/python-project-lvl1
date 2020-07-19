@@ -26,22 +26,22 @@ def tellme_yes_or_no(predicat):
     return ans
 
 
-def set_general_logic(description, set_game_logic):
+def generate_general_game_data(game):
     """Game engine.
 
     Parameters:
-        description: Game rules
-        set_game_logic: contains question and answer
+        game: game module
     """
+    description = game.description
     print('Welcome to the Brain Games!')
     print('{0}\n'.format(description))
     username = welcome_user()
     print('Hello, {0}!\n'.format(username))
     count = 0
-    # extract question, answer from set_game_logic
+    # extract question, answer from generate_game_data
     NUMBER_OF_QUESTIONS = 3
     while count < NUMBER_OF_QUESTIONS:
-        game_logic_list = set_game_logic()
+        game_logic_list = game.generate_game_data()
         question = game_logic_list[0]
         answer = game_logic_list[1]
         answer = tellme_yes_or_no(answer)  # проверка на предикат

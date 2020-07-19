@@ -34,7 +34,7 @@ def get_gcd(first_digit, second_digit):
     return answer
 
 
-def set_game_logic():
+def generate_game_data():
     """Right answer.
 
     Returns:

@@ -31,7 +31,7 @@ def is_prime(digit):  # должен быть предикат
     return answer
 
 
-def set_game_logic():
+def generate_game_data():
     """Prime of random digit.
 
     Returns:

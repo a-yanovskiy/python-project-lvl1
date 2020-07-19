@@ -11,7 +11,7 @@ from random import choice, randint
 description = 'What is the result of the expression?.'
 
 
-def set_game_logic():
+def generate_game_data():
     """Question.
 
     Returns:
