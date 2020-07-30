@@ -8,7 +8,9 @@
 
 from random import randint
 
-description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_DESCRIPTION = (
+    'Answer "yes" if given number is prime. Otherwise answer "no".'
+        )
 
 
 def is_prime(digit):  # должен быть предикат
@@ -20,14 +22,15 @@ def is_prime(digit):  # должен быть предикат
     Returns:
         answer: True if it is prime, or False is not.
     """
-    answer = True
-    divider = digit - 1
+    divider = (digit / 2) - 1
     while divider > 1:
         if digit % divider == 0:
             answer = False
             break
         else:
             divider -= 1
+    else:
+        answer = True
     return answer
 
 

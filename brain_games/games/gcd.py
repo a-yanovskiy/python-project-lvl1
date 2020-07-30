@@ -8,7 +8,7 @@
 
 from random import randint
 
-description = 'Find the greatest common divisor of given numbers.'
+GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def get_gcd(first_digit, second_digit):

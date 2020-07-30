@@ -8,7 +8,7 @@
 import operator
 from random import choice, randint
 
-description = 'What is the result of the expression?.'
+GAME_DESCRIPTION = 'What is the result of the expression?.'
 
 
 def generate_game_data():

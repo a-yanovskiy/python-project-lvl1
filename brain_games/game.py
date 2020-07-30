@@ -5,9 +5,6 @@ For simple console games.
 """
 from prompt import string
 
-from brain_games.cli import welcome_user
-
-
 def tellme_yes_or_no(predicat):
     """Take True or False.
 
@@ -26,24 +23,22 @@ def tellme_yes_or_no(predicat):
     return ans
 
 
-def generate_general_game_data(game):
+def play_game_engine(game):
     """Game engine.
 
     Parameters:
         game: game module
     """
-    description = game.description
+    GAME_DESCRIPTION = game.GAME_DESCRIPTION
     print('Welcome to the Brain Games!')
-    print('{0}\n'.format(description))
-    username = welcome_user()
+    print('{0}\n'.format(GAME_DESCRIPTION))
+    username = string('May I have your name? ')
     print('Hello, {0}!\n'.format(username))
     count = 0
     # extract question, answer from generate_game_data
     NUMBER_OF_QUESTIONS = 3
     while count < NUMBER_OF_QUESTIONS:
-        game_logic_list = game.generate_game_data()
-        question = game_logic_list[0]
-        answer = game_logic_list[1]
+        (question, answer) = game.generate_game_data()
         answer = tellme_yes_or_no(answer)  # проверка на предикат
         print(question)
         user_answer = string('Your answer: ')  # user input

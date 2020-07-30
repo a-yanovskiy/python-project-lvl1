@@ -7,7 +7,7 @@
 
 from random import randint
 
-description = 'Answer "yes" if number even otherwise answer "no".'
+GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
 def is_even(digit):
@@ -19,7 +19,7 @@ def is_even(digit):
     Returns:
         True or False
     """
-    return True if digit % 2 == 0 else False
+    return digit % 2 == 0
 
 
 def generate_game_data():
