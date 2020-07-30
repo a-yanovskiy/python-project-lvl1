@@ -5,7 +5,7 @@
 
 
 ## Brain-games
-# Istalling
+### Istalling
 To install Brain-games:
     pip install -i https://test.pypi.org/simple/ a-yanovskiy-brain-games --extra-index-url https://pypi.org/simple/
 
@@ -21,7 +21,7 @@ This command will install:
 ## Game: "Calculator"
 The user is shown a random mathematical expression, which need to calculate and write the correct answer.
 
-# Starting:
+### Starting:
 To start Calculator game use 'brain-calc' command
 
 [![asciicast](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB.svg)](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB)
@@ -29,7 +29,7 @@ To start Calculator game use 'brain-calc' command
 ## Game: "Parity".
 A random number is shown to the user. Needs to answer "yes" if the number is even, or "no" if it isn't.
 
-# Starting:
+### Starting:
 To start Parity game use 'brain-even' command
 
 [![asciicast](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv.svg)](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv)
@@ -38,7 +38,7 @@ To start Parity game use 'brain-even' command
 The user is shown two random numbers.
 The user must calculate and enter the largest common divisor of these numbers.
 
-# Starting:
+### Starting:
 To start GCD game use 'brain-gcd' command
 
 [![asciicast](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR.svg)](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR)
@@ -47,7 +47,7 @@ To start GCD game use 'brain-gcd' command
 A random number is shown to the user. Needs to answer "yes" if the number is prime,
 or "no" if isn't.
 
-# Starting:
+### Starting:
 To start Prime game use 'brain-prime' command
 
 [![asciicast](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq.svg)](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq)
@@ -56,7 +56,7 @@ To start Prime game use 'brain-prime' command
 The player is shown a series of numbers forming an arithmetic progression,
 replacing any of the numbers with two points. The player must determine this number.
 
-# Starting:
+### Starting:
 Tor start Progression game use 'brain-progression' command
 
 [![asciicast](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho.svg)](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho)
