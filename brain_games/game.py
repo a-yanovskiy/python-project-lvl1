@@ -5,6 +5,7 @@ For simple console games.
 """
 from prompt import string
 
+
 def tellme_yes_or_no(predicat):
     """Take True or False.
 
