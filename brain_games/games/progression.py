@@ -10,27 +10,44 @@ from random import randint
 GAME_DESCRIPTION = 'What number is missing in the progression?'
 
 
-def find_question_and_ans(length, start_dig, step_dig, skip_dig):
+def generate_progression(length, start_dig, step_dig):
     """Set question and answer from arithmetic progression.
 
     Parameters:
         length: lenght of arithmetic progression
         start_dig: start of arithmetic progression
         step_dig: step of arithmetic progression
-        skip_dig: index of digit which must be skiped
+
+    Returns:
+        progression: progression with skiped digit
+        answer: skiped digit with index = skip_digit
+    """
+    progression = []
+    for index in range(length):
+        dig = str(start_dig + step_dig * index)
+        progression.append(dig)
+    return progression
+
+
+def find_question_and_ans(progression, skip_dig):
+    """Set question and answer from arithmetic progression.
+
+    Parameters:
+        skip_dig: index of element in progression will skip
+        progression: arithmetic progression
 
     Returns:
         question: progression with skiped digit
         answer: skiped digit with index = skip_digit
     """
-    res = ''  # result
-    for index in range(10):
-        dig = str(start_dig + step_dig * index)
+    result = ''
+    answer = 0
+    for (index, element) in enumerate(progression):
         if index == skip_dig:  # replace skiping digit to '..'
-            dig = '..'
-        res += dig + ' '
-    question = res[:-1]  # del last spase
-    answer = str(start_dig + step_dig * skip_dig)
+            answer = element
+            element = '..'
+        result += element + ' '
+    question = result[:-1]  # del last space
     return question, answer
 
 
@@ -49,11 +66,16 @@ def generate_game_data():
     digit = randint(1, DIGIT_RANDOM_TO)
     step = randint(1, STEP_RANDOM_TO)
     skip = randint(0, PROGRESSION_LENGHT - 1)
-    # End
+    # end
 
-    # Take from functions
-    que_ans_list = find_question_and_ans(PROGRESSION_LENGHT, digit, step, skip)
+    # Take progression
+    progression = generate_progression(PROGRESSION_LENGHT, digit, step)
+    # end
+
+    # Take answer and question
+    que_ans_list = find_question_and_ans(progression, skip)
     question = que_ans_list[0]
     answer = que_ans_list[1]
-    # End
+    # end
+
     return question, answer

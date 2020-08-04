@@ -24,7 +24,7 @@ def tellme_yes_or_no(predicat):
     return ans
 
 
-def play_game_engine(game):
+def play_game(game):
     """Game engine.
 
     Parameters:
