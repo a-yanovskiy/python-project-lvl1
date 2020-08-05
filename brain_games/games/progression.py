@@ -29,7 +29,7 @@ def generate_progression(length, start_dig, step_dig):
     return progression
 
 
-def find_question_and_ans(progression, skip_dig):
+def find_question_and_answer(progression, skip_dig):
     """Set question and answer from arithmetic progression.
 
     Parameters:
@@ -73,9 +73,8 @@ def generate_game_data():
     # end
 
     # Take answer and question
-    que_ans_list = find_question_and_ans(progression, skip)
-    question = que_ans_list[0]
-    answer = que_ans_list[1]
+    que_ans_list = find_question_and_answer(progression, skip)
+    (question, answer) = que_ans_list
     # end
 
     return question, answer

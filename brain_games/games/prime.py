@@ -6,6 +6,7 @@
 или no - если число не является простым.
 """
 
+import brain_games.game_adds
 from random import randint
 
 GAME_DESCRIPTION = (
@@ -22,16 +23,19 @@ def is_prime(digit):  # должен быть предикат
     Returns:
         answer: True if it is prime, or False is not.
     """
-    divider = (digit / 2) - 1
-    while divider > 1:
-        if digit % divider == 0:
-            answer = False
-            break
+    if digit < 2:  # guardian expression
+        divider = (digit / 2) - 1
+        while divider > 1:
+            if digit % divider == 0:
+                answer = False
+                break
+            else:
+                divider -= 1
         else:
-            divider -= 1
+            answer = True
+            return answer
     else:
-        answer = True
-    return answer
+        return False
 
 
 def generate_game_data():
@@ -41,5 +45,5 @@ def generate_game_data():
         question, answer.
     """
     question = randint(1, 100)
-    answer = is_prime(question)
+    answer = game_adds.tellme_yes_or_no(is_prime(question))
     return question, answer
