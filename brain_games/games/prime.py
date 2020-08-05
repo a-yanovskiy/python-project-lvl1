@@ -6,7 +6,7 @@
 или no - если число не является простым.
 """
 
-import brain_games.game_adds
+from brain_games import game_adds
 from random import randint
 
 GAME_DESCRIPTION = (

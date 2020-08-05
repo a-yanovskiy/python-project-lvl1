@@ -5,6 +5,7 @@
 И ему нужно ответить yes, если число четное, или no - если нечетное.
 """
 
+from brain_games import game_adds
 from random import randint
 
 GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
@@ -29,5 +30,5 @@ def generate_game_data():
         question, answer.
     """
     question = randint(1, 100)
-    answer = is_even(question)
+    answer = game_adds.tellme_yes_or_no(is_even(question))
     return question, answer
