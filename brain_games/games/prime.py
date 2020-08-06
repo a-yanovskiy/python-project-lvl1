@@ -23,7 +23,7 @@ def is_prime(digit):  # должен быть предикат
     Returns:
         answer: True if it is prime, or False is not.
     """
-    if digit < 2:  # guardian expression
+    if digit > 2:  # guardian expression
         divider = (digit / 2) - 1
         while divider > 1:
             if digit % divider == 0:
