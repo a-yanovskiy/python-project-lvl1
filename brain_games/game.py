@@ -6,6 +6,10 @@ For simple console games.
 from prompt import string
 
 
+def NUMBER_OF_QUESTIONS():
+    return 3
+
+
 def play_game(game):
     """Game engine.
 
@@ -18,8 +22,7 @@ def play_game(game):
     print('Hello, {0}!\n'.format(username))
     count = 0
     # extract question, answer from generate_game_data
-    NUMBER_OF_QUESTIONS = 3
-    while count < NUMBER_OF_QUESTIONS:
+    while count < NUMBER_OF_QUESTIONS():
         (question, answer) = game.generate_game_data()
         print(question)
         user_answer = string('Your answer: ')  # user input
@@ -32,7 +35,5 @@ def play_game(game):
 Let's try again, {2}!
                 """.format(user_answer, answer, username),
             )
-            break
-        if count < NUMBER_OF_QUESTIONS:
-            continue
+            return
         print('Congratulations, {0}!'.format(username))
