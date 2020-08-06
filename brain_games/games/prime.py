@@ -6,8 +6,9 @@
 или no - если число не является простым.
 """
 
-from brain_games import game_adds
 from random import randint
+
+from brain_games import game_adds
 
 GAME_DESCRIPTION = (
     'Answer "yes" if given number is prime. Otherwise answer "no".'

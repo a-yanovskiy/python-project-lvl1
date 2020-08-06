@@ -1,6 +1,5 @@
-"""
-Дополнительный модуль для game.py
-"""
+"""Дополнительный модуль для game.py."""
+
 
 def tellme_yes_or_no(predicat):
     """Take True or False.

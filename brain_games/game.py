@@ -7,6 +7,7 @@ from prompt import string
 
 
 def NUMBER_OF_QUESTIONS():
+    """Const on module lvl."""
     return 3
 
 

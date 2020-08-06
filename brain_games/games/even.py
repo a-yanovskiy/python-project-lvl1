@@ -5,8 +5,9 @@
 И ему нужно ответить yes, если число четное, или no - если нечетное.
 """
 
-from brain_games import game_adds
 from random import randint
+
+from brain_games import game_adds
 
 GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
