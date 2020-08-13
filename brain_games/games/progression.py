@@ -22,15 +22,16 @@ def progression(length, start, step, skip):
         progression: progression with skiped digit
         answer: skiped digit with index = skip_digit
     """
-    progression = []
+    progression = ''
     for index in range(length):
         element = str(start + step * index)
         if index == skip:  # replace skiping digit to '..'
             answer = element
-            progression.append('.. ')
+            progression += '.. '
             continue
-        progression.append(element)
-    return progression, answer
+        progression += element + ' '
+        question = progression[:-1]  # лишнее
+    return question, answer
 
 
 
