@@ -5,10 +5,7 @@ For simple console games.
 """
 from prompt import string
 
-
-def NUMBER_OF_QUESTIONS():
-    """Const on module lvl."""
-    return 3
+NUMBER_OF_QUESTIONS = 3
 
 
 def play_game(game):
@@ -23,7 +20,7 @@ def play_game(game):
     print('Hello, {0}!\n'.format(username))
     count = 0
     # extract question, answer from generate_game_data
-    while count < NUMBER_OF_QUESTIONS():
+    while count < NUMBER_OF_QUESTIONS:
         (question, answer) = game.generate_game_data()
         print(question)
         user_answer = string('Your answer: ')  # user input
