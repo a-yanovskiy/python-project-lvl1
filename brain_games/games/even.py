@@ -7,8 +7,6 @@
 
 from random import randint
 
-from brain_games import game_adds
-
 GAME_DESCRIPTION = 'Answer "yes" if number even otherwise answer "no".'
 
 
@@ -31,5 +29,5 @@ def generate_game_data():
         question, answer.
     """
     question = randint(1, 100)
-    answer = game_adds.tellme_yes_or_no(is_even(question))
+    answer = 'yes' if is_even(question) else 'no'
     return question, answer

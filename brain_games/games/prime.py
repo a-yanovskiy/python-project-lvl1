@@ -8,8 +8,6 @@
 
 from random import randint
 
-from brain_games import game_adds
-
 GAME_DESCRIPTION = (
     'Answer "yes" if given number is prime. Otherwise answer "no".'
         )
@@ -46,5 +44,5 @@ def generate_game_data():
         question, answer.
     """
     question = randint(1, 100)
-    answer = game_adds.tellme_yes_or_no(is_prime(question))
+    answer = 'yes' if is_prime(question) else 'no'
     return question, answer
