@@ -13,7 +13,7 @@ GAME_DESCRIPTION = (
         )
 
 
-def is_prime(digit):  # должен быть предикат
+def is_prime(digit):
     """Take digit. Returns True if it is prime, or False is not.
 
     Parameters:
@@ -22,17 +22,15 @@ def is_prime(digit):  # должен быть предикат
     Returns:
         answer: True if it is prime, or False is not.
     """
-    if digit > 2:  # guardian expression
-        divider = (digit / 2) - 1
+    if digit > 2:
+        divider = (digit // 2)
         while divider > 1:
             if digit % divider == 0:
-                answer = False
-                break
+                return False
             else:
                 divider -= 1
         else:
-            answer = True
-            return answer
+            return True
     else:
         return False
 
