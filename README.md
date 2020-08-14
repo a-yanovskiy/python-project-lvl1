@@ -6,7 +6,7 @@
 
 ## Brain-games
 ### Istalling
-To install Brain-games:
+To install Brain-games:  
 `~$ pip install -i https://test.pypi.org/simple/a-yanovskiy-brain-games --extra-index-url https://pypi.org/simple/`
 
 This command will install:
@@ -36,7 +36,7 @@ replacing any of the numbers with two points. The player must determine this num
 The user is shown a random mathematical expression, which need to calculate and write the correct answer.
 
 ### Starting:
-To start Calculator game use: 
+To start Calculator game use:  
 `~$ brain-calc`
 
 [![asciicast](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB.svg)](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB)
@@ -45,7 +45,7 @@ To start Calculator game use:
 A random number is shown to the user. Needs to answer "yes" if the number is even, or "no" if it isn't.
 
 ### Starting:
-To start Parity game use:
+To start Parity game use:  
 `~$ brain-even`
 
 [![asciicast](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv.svg)](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv)
@@ -55,7 +55,7 @@ The user is shown two random numbers.
 The user must calculate and enter the largest common divisor of these numbers.
 
 ### Starting:
-To start GCD game use
+To start GCD game use:  
 `~$ brain-gcd`
 
 [![asciicast](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR.svg)](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR)
@@ -65,7 +65,7 @@ A random number is shown to the user. Needs to answer "yes" if the number is pri
 or "no" if isn't.
 
 ### Starting:
-To start Prime game use 
+To start Prime game use:  
 `~$ brain-prime`
 
 [![asciicast](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq.svg)](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq)
@@ -75,7 +75,7 @@ The player is shown a series of numbers forming an arithmetic progression,
 replacing any of the numbers with two points. The player must determine this number.
 
 ### Starting:
-Tor start Progression game use
+Tor start Progression game use:  
 `~$ brain-progression`
 
 [![asciicast](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho.svg)](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho)
