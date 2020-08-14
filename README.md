@@ -7,20 +7,20 @@
 Brain-games is a collection of console games.  
 Including:
 
-###### Game: "Calculator"
+##### Game: "Calculator"
 _The user is shown a random mathematical expression, which need to calculate and write the correct answer._
 
-###### Game: "Parity".
+##### Game: "Parity".
 _A random number is shown to the user. Needs to answer "yes" if the number is even, or "no" if it isn't._
 
-###### Game: "GCD".
+##### Game: "GCD".
 _The user is shown two random numbers._
 _The user must calculate and enter the largest common divisor of these numbers._
 
-###### Game: "Is number prime?".
+##### Game: "Is number prime?".
 _A random number is shown to the user. Needs to answer "yes" if the number is prime, or "no" if isn't._
 
-###### Game: "Arithmetic progression."
+##### Game: "Arithmetic progression."
 _The player is shown a series of numbers forming an arithmetic progression, replacing any of the numbers with two points. The player must determine this number._  
 
 
