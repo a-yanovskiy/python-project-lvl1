@@ -10,13 +10,14 @@ from random import randint
 GAME_DESCRIPTION = 'What number is missing in the progression?'
 
 
-def progression(length, start, step, skip):
+def arithmetic_progression(length, start, step, skip):
     """Set question and answer from arithmetic progression.
 
     Parameters:
         length: lenght of arithmetic progression
         start: start of arithmetic progression
         step: step of arithmetic progression
+        skip: index of skiping number
 
     Returns:
         progression: progression with skiped digit
@@ -25,14 +26,13 @@ def progression(length, start, step, skip):
     progression = ''
     for index in range(length):
         element = str(start + step * index)
-        if index == skip:  # replace skiping digit to '..'
+        if index == skip:
             answer = element
             progression += '.. '
             continue
         progression += element + ' '
-        question = progression[:-1]  # лишнее
+        question = progression[:-1]
     return question, answer
-
 
 
 def generate_game_data():
@@ -52,9 +52,8 @@ def generate_game_data():
     skip = randint(0, PROGRESSION_LENGHT - 1)
     # end
 
-    # Take progression
-    (question, answer) = progression(PROGRESSION_LENGHT, digit, step, skip)
-    # end
-
+    (question, answer) = arithmetic_progression(
+        PROGRESSION_LENGHT, digit, step, skip,
+    )
 
     return question, answer
