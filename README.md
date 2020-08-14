@@ -11,21 +11,21 @@ To install Brain-games:n\
 
 This command will install:
 
-### Game: "Calculator"
+#### Game: "Calculator"
 The user is shown a random mathematical expression, which need to calculate and write the correct answer.
 
-### Game: "Parity".
+#### Game: "Parity".
 A random number is shown to the user. Needs to answer "yes" if the number is even, or "no" if it isn't.
 
-### Game: "GCD".
+#### Game: "GCD".
 The user is shown two random numbers.
 The user must calculate and enter the largest common divisor of these numbers.
 
-### Game: "Is number prime?".
+#### Game: "Is number prime?".
 A random number is shown to the user. Needs to answer "yes" if the number is prime,
 or "no" if isn't.
 
-### Game: "Arithmetic progression."
+#### Game: "Arithmetic progression."
 The player is shown a series of numbers forming an arithmetic progression,
 replacing any of the numbers with two points. The player must determine this number.
 
@@ -37,7 +37,7 @@ The user is shown a random mathematical expression, which need to calculate and 
 
 ### Starting:
 To start Calculator game use: 
-`~$ brain-calc`
+n\ `~$ brain-calc`
 
 [![asciicast](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB.svg)](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB)
 
@@ -46,7 +46,7 @@ A random number is shown to the user. Needs to answer "yes" if the number is eve
 
 ### Starting:
 To start Parity game use:
-`~$ brain-even`
+n\ `~$ brain-even`
 
 [![asciicast](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv.svg)](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv)
 
@@ -56,7 +56,7 @@ The user must calculate and enter the largest common divisor of these numbers.
 
 ### Starting:
 To start GCD game use
-`~$ brain-gcd`
+n\ `~$ brain-gcd`
 
 [![asciicast](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR.svg)](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR)
 
@@ -65,8 +65,8 @@ A random number is shown to the user. Needs to answer "yes" if the number is pri
 or "no" if isn't.
 
 ### Starting:
-To start Prime game use
-`~$ brain-prime`
+To start Prime game use 
+n\ `~$ brain-prime`
 
 [![asciicast](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq.svg)](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq)
 
@@ -76,6 +76,6 @@ replacing any of the numbers with two points. The player must determine this num
 
 ### Starting:
 Tor start Progression game use
-`~$ brain-progression`
+n\ `~$ brain-progression`
 
 [![asciicast](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho.svg)](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho)
