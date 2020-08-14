@@ -1,35 +1,34 @@
-# python-project-lvl1
 [![Build Status](https://travis-ci.com/a-yanovskiy/python-project-lvl1.svg?branch=master)](https://travis-ci.com/a-yanovskiy/python-project-lvl1)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 [![Maintainability](https://api.codeclimate.com/v1/badges/06ecd24ffad07549a7f1/maintainability)](https://codeclimate.com/github/a-yanovskiy/python-project-lvl1/maintainability)
 
 
-## Brain-games
-### Istalling
-To install Brain-games:  
-`~$ pip install -i https://test.pypi.org/simple/a-yanovskiy-brain-games --extra-index-url https://pypi.org/simple/`
+# Brain-games
+Brain-games is a collection of console games.  
+Including:
 
-This command will install:
-
-#### Game: "Calculator"
+##### Game: "Calculator"
 The user is shown a random mathematical expression, which need to calculate and write the correct answer.
 
-#### Game: "Parity".
+##### Game: "Parity".
 A random number is shown to the user. Needs to answer "yes" if the number is even, or "no" if it isn't.
 
-#### Game: "GCD".
+##### Game: "GCD".
 The user is shown two random numbers.
 The user must calculate and enter the largest common divisor of these numbers.
 
-#### Game: "Is number prime?".
+##### Game: "Is number prime?".
 A random number is shown to the user. Needs to answer "yes" if the number is prime,
 or "no" if isn't.
 
-#### Game: "Arithmetic progression."
+##### Game: "Arithmetic progression."
 The player is shown a series of numbers forming an arithmetic progression,
 replacing any of the numbers with two points. The player must determine this number.
 
 
+### Istalling
+To install Brain-games:  
+`~$ pip install -i https://test.pypi.org/simple/a-yanovskiy-brain-games --extra-index-url https://pypi.org/simple/`
 [![asciicast](https://asciinema.org/a/22c9NpWnYgDck0xdfs7OuFumu.svg)](https://asciinema.org/a/22c9NpWnYgDck0xdfs7OuFumu)
 
 ## Game: "Calculator"
