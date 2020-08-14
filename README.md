@@ -6,7 +6,7 @@
 
 ## Brain-games
 ### Istalling
-To install Brain-games:n\
+To install Brain-games:
 `~$ pip install -i https://test.pypi.org/simple/a-yanovskiy-brain-games --extra-index-url https://pypi.org/simple/`
 
 This command will install:
@@ -37,7 +37,7 @@ The user is shown a random mathematical expression, which need to calculate and 
 
 ### Starting:
 To start Calculator game use: 
-n\ `~$ brain-calc`
+`~$ brain-calc`
 
 [![asciicast](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB.svg)](https://asciinema.org/a/BX71okLywDzwRaITxJpw7WyjB)
 
@@ -46,7 +46,7 @@ A random number is shown to the user. Needs to answer "yes" if the number is eve
 
 ### Starting:
 To start Parity game use:
-n\ `~$ brain-even`
+`~$ brain-even`
 
 [![asciicast](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv.svg)](https://asciinema.org/a/vCUCiXbsvXZcBsHnbdQDv49Gv)
 
@@ -56,7 +56,7 @@ The user must calculate and enter the largest common divisor of these numbers.
 
 ### Starting:
 To start GCD game use
-n\ `~$ brain-gcd`
+`~$ brain-gcd`
 
 [![asciicast](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR.svg)](https://asciinema.org/a/sj5zM6bne83T2E3cWhIl3wKoR)
 
@@ -66,7 +66,7 @@ or "no" if isn't.
 
 ### Starting:
 To start Prime game use 
-n\ `~$ brain-prime`
+`~$ brain-prime`
 
 [![asciicast](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq.svg)](https://asciinema.org/a/I9xK0bzS2QLPBGnXvFgF30lOq)
 
@@ -76,6 +76,6 @@ replacing any of the numbers with two points. The player must determine this num
 
 ### Starting:
 Tor start Progression game use
-n\ `~$ brain-progression`
+`~$ brain-progression`
 
 [![asciicast](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho.svg)](https://asciinema.org/a/GSXgGPYbMJX8KgYCiYZzS18ho)
