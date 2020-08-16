@@ -22,7 +22,9 @@ def is_prime(digit):
     Returns:
         answer: True if it is prime, or False is not.
     """
-    if digit > 2:
+    if digit < 2:
+        return False
+    else:
         divider = (digit // 2)
         while divider > 1:
             if digit % divider == 0:
@@ -31,8 +33,6 @@ def is_prime(digit):
                 divider -= 1
         else:
             return True
-    else:
-        return False
 
 
 def generate_game_data():
