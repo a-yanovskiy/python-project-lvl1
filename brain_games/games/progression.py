@@ -10,7 +10,7 @@ from random import randint
 GAME_DESCRIPTION = 'What number is missing in the progression?'
 
 
-def generate_progression_and_skiped_element(length, start, step, skip):
+def generate_game(length, start, step, skip):
     """Set question and answer from arithmetic progression.
 
     Parameters:
@@ -52,7 +52,7 @@ def generate_game_data():
     skip = randint(0, PROGRESSION_LENGHT - 1)
     # end
 
-    (question, answer) = generate_progression_and_skiped_element(
+    (question, answer) = generate_game(
         PROGRESSION_LENGHT, digit, step, skip,
     )
 
