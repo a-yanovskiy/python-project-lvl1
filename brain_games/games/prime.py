@@ -1,9 +1,8 @@
 """
-Игра "Простое ли число?".
+The game "Is a number prime?".
 
-Суть игры в следующем: пользователю показывается случайное число.
-И ему нужно ответить yes, если число простое,
-или no - если число не является простым.
+A random number is shown to the user. 
+Needs to answer yes if the number is prime, or no if the number is not prime.
 """
 
 from random import randint
