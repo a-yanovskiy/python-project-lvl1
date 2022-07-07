@@ -1,7 +1,5 @@
 """
 Calling Progression-game.
-
-Some discription.
 """
 
 from brain_games.game_engine import play_game
