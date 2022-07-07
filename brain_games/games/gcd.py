@@ -1,9 +1,8 @@
 """
-Игра "НОД".
+The game "GCD".
 
-Суть игры в следующем:
-Пользователю показывается два случайных числа.
-Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+The user is shown two random numbers.
+The user must calculate and enter the greatest common divisor of these numbers.
 """
 
 from random import randint
