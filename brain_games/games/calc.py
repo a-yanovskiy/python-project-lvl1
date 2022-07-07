@@ -1,8 +1,7 @@
 """
-Игра: "Калькулятор".
-
-Пользователю показывается случайное математическое выражение,
-которое нужно вычислить и записать правильный ответ.
+Game: "Calculator".
+The user is shown a random mathematical expression
+that needs to be calculated and written down the correct answer.
 """
 
 import operator
