@@ -1,8 +1,8 @@
 """
-Игра "Арифметическая прогрессия".
+The game "Arithmetic progression".
 
-Игроку показывается ряд чисел, образующий арифметическую прогрессию,
-заменив любое из чисел двумя точками. Игрок должен определить это число.
+The player is shown a series of numbers forming an arithmetic progression,
+replacing any of the numbers with two dots. The player must determine this number.
 """
 
 from random import randint
