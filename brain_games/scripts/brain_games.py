@@ -1,9 +1,3 @@
-"""
-Script brain_games.
-
-Simple console games. Project #1
-"""
-
 from brain_games.cli import welcome_user
 
 
