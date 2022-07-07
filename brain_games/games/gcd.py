@@ -25,8 +25,8 @@ def get_gcd(first_digit, second_digit):
     else:
         min_digit = min(first_digit, second_digit)
         max_digit = max(first_digit, second_digit)
-        answer = min_digit  # минимальное число принимаем за ответ
-        while max_digit % answer != 0:  # делим большее число на меньшее
+        answer = min_digit
+        while max_digit % answer != 0:
             answer -= 1
             while min_digit % answer != 0:
                 answer -= 1
