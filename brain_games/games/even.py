@@ -1,8 +1,7 @@
 """
-Игра: "Проверка на четность".
-
-Суть игры в следующем: пользователю показывается случайное число.
-И ему нужно ответить yes, если число четное, или no - если нечетное.
+Game: "Parity check".
+A random number is shown to the user.
+And he needs to answer yes if the number is even, or no if it is odd.
 """
 
 from random import randint
